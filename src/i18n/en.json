@@ -1,0 +1,31 @@
+{
+  "home.title": "Welcome to Exia",
+  "home.showcase": "3D Planet Showcase",
+  "home.classification": "Data Classification",
+
+  "layout.home": "Home",
+
+  "classifier.title": "AI Classifier",
+  "classifier.download.csv": "Download CSV",
+  "classifier.download.json": "Download JSON",
+  "classifier.results": "Results",
+  "classifier.classification": "Classification",
+  "classifier.processing": "Processing...",
+  "classifier.upload": "Upload & Classify",
+  "classifier.please.select.file": "Please select a file first.",
+
+  "showcase.choose": "Choose Your Planet",
+  "showcase.label": "Planet Name:",
+  "showcase.placeholder": "e.g. Earth, Jupiter, Mars",
+  "showcase.submit": "Show Planet",
+  "showcase.reset": "Reset",
+  "showcase.unknown": "Unknown planet. Try earth, jupiter, mars.",
+
+  "scene.hotspot1.title": "1",
+  "scene.hotspot1.desc": "This is Jupiter's Great Red Spot",
+  "scene.hotspot2.title": "2",
+  "scene.hotspot2.desc": "Jupiter's belts and zones",
+
+  "switcher.label": "Language"
+}
+

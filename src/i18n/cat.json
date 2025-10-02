@@ -1,0 +1,31 @@
+{
+  "home.title": "Benvingut a Exia",
+  "home.showcase": "",
+  "home.classification": "",
+
+  "layout.home": "Inici",
+
+  "classifier.title": "",
+  "classifier.download.csv": "",
+  "classifier.download.json": "",
+  "classifier.results": "",
+  "classifier.classification": "",
+  "classifier.processing": "",
+  "classifier.upload": "",
+  "classifier.please.select.file": "",
+
+  "showcase.choose": "",
+  "showcase.label": "",
+  "showcase.placeholder": "",
+  "showcase.submit": "",
+  "showcase.reset": "",
+  "showcase.unknown": "",
+
+  "scene.hotspot1.title": "1",
+  "scene.hotspot1.desc": "",
+  "scene.hotspot2.title": "2",
+  "scene.hotspot2.desc": "",
+
+  "switcher.label": "Idioma"
+}
+

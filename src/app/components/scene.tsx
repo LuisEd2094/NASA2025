@@ -8,6 +8,7 @@ import { useFrame } from "@react-three/fiber"
 import gsap from "gsap"
 import * as THREE from "three"
 import { Html } from "@react-three/drei"
+import { useI18n } from "../../i18n"
 
 
 
@@ -24,11 +25,12 @@ type Hotspot2D = {
 }
 
 const hotspots2D: Hotspot2D[] = [
-    { screenPosition: [-100, 50], title: "1", description: "This is Jupiter's Great Red Spot" },
-    { screenPosition: [120, 80], title: "2", description: "Jupiter's belts and zones" },
+    { screenPosition: [-100, 50], title: "1", description: "scene.hotspot1.desc" },
+    { screenPosition: [120, 80], title: "2", description: "scene.hotspot2.desc" },
 ]
 
 function FixedHotspots({ hotspots }: { hotspots: Hotspot2D[] }) {
+    const { t } = useI18n()
     const [activeIndex, setActiveIndex] = useState<number | null>(null)
 
     return (
@@ -58,7 +60,7 @@ function FixedHotspots({ hotspots }: { hotspots: Hotspot2D[] }) {
                         {activeIndex === i && (
                             <div className="absolute top-14 left-1/2 -translate-x-1/2 bg-black/90 text-white p-3 rounded shadow-lg max-w-xs z-50 pointer-events-auto">
                                 <h3 className="font-bold mb-1">{hotspot.title}</h3>
-                                <p className="text-sm">{hotspot.description}</p>
+                                <p className="text-sm">{t(hotspot.description)}</p>
                             </div>
                         )}
                     </div>

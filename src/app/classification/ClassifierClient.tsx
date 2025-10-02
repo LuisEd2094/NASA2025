@@ -4,6 +4,7 @@
 import { useState } from "react"
 import { Canvas } from "@react-three/fiber"
 import { OrbitControls, useGLTF, Stars } from "@react-three/drei"
+import { useI18n } from "../../i18n"
 
 type ClassificationResult = {
   id: number
@@ -58,6 +59,7 @@ const pageBackgroundStyle = {
 }
 
 export default function ClassifierClient() {
+  const { t } = useI18n()
   const [file, setFile] = useState<File | null>(null)
   const [loading, setLoading] = useState(false)
   const [results, setResults] = useState<ClassificationResult[] | null>(null)
@@ -66,7 +68,7 @@ export default function ClassifierClient() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!file) {
-      alert("Please select a file first.")
+      alert(t("classifier.please.select.file"))
       return
     }
 
@@ -88,7 +90,7 @@ export default function ClassifierClient() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-black text-white"
       style={pageBackgroundStyle} >
-      <h1 className="text-3xl font-bold mb-6">AI Classifier</h1>
+      <h1 className="text-3xl font-bold mb-6">{t("classifier.title")}</h1>
 
       <form
         onSubmit={handleSubmit}
@@ -107,18 +109,18 @@ export default function ClassifierClient() {
           disabled={loading}
           className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded disabled:opacity-50"
         >
-          {loading ? "Processing..." : "Upload & Classify"}
+          {loading ? t("classifier.processing") : t("classifier.upload")}
         </button>
       </form>
 
       {results && (
         <div className="mt-8 w-full max-w-md">
-          <h2 className="text-xl font-semibold mb-4">Results:</h2>
+          <h2 className="text-xl font-semibold mb-4 text-center">{t("classifier.results")}</h2>
           <table className="w-full border border-gray-600">
             <thead>
               <tr className="bg-gray-800">
                 <th className="border border-gray-600 px-4 py-2">ID</th>
-                <th className="border border-gray-600 px-4 py-2">Classification</th>
+                <th className="border border-gray-600 px-4 py-2">{t("classifier.classification")}</th>
               </tr>
             </thead>
             <tbody>
@@ -139,18 +141,18 @@ export default function ClassifierClient() {
           </table>
           
           {/* Download buttons */}
-          <div className="flex gap-2 justify-end">
+          <div className="flex gap-2 mt-2 justify-center">
             <button
               onClick={() => downloadResults(results, "csv")}
               className="bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded"
             >
-              Download CSV
+              {t("classifier.download.csv")}
             </button>
             <button
               onClick={() => downloadResults(results, "json")}
               className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded"
             >
-              Download JSON
+              {t("classifier.download.json")}
             </button>
           </div>
         </div>
