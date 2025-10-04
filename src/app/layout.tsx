@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "flag-icons/css/flag-icons.min.css";
 import HomeButton from "./components/HomeButton"
 import { I18nProvider, LanguageSwitcher } from "../i18n"
 
