@@ -1,7 +1,7 @@
 // src/app/page.js
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Scene from "../components/scene"
 import { useI18n } from "../../i18n"
 
@@ -25,6 +25,11 @@ export default function Home() {
   const { t } = useI18n()
   const [planet, setPlanet] = useState<ModelConfig | null>(null)
   const [input, setInput] = useState("")
+
+  // Update page title dynamically
+  useEffect(() => {
+    document.title = t("showcase.title")
+  }, [t])
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()

@@ -1,7 +1,7 @@
 // src/app/classification/ClassifierClient.tsx
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Canvas } from "@react-three/fiber"
 import { OrbitControls, useGLTF, Stars } from "@react-three/drei"
 import { useI18n } from "../../i18n"
@@ -64,6 +64,11 @@ export default function ClassifierClient() {
   const [loading, setLoading] = useState(false)
   const [results, setResults] = useState<ClassificationResult[] | null>(null)
   const [selected, setSelected] = useState<string | null>(null)
+
+  // Update page title dynamically
+  useEffect(() => {
+    document.title = t("classifier.title")
+  }, [t])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
