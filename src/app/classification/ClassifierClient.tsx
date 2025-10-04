@@ -159,11 +159,13 @@ export default function ClassifierClient() {
       {/* 🔹 Modal for mini 3D planet preview */}
       {selected && planetModels[selected] && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center"
-          onClick={() => setSelected(null)}>
+          onMouseDown={() => setSelected(null)}>
           <div className="fixed inset-0 bg-black/70 flex items-center justify-center">
-            <div className="relative bg-gray-900 p-4 rounded-lg w-[400px] h-[400px] shadow-lg">
+            {/* Captures the onMouseDown event and stops propagation to its parent div */}
+            <div className="relative bg-gray-900 p-4 rounded-lg w-[400px] h-[400px] shadow-lg"
+              onMouseDown={(event) => event.stopPropagation()}>
               <button
-                onClick={() => setSelected(null)}
+                onMouseDown={() => setSelected(null)}
                 className="absolute top-2 right-2 bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded z-50"
               >
                 ✕
