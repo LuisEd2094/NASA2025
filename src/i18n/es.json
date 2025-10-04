@@ -5,7 +5,7 @@
 
   "layout.home": "Inicio",
 
-  "classifier.title": "Clasificador de IA",
+  "classifier.title": "Exia - Clasificador de IA",
   "classifier.download.csv": "Descargar CSV",
   "classifier.download.json": "Descargar JSON",
   "classifier.results": "Resultados",
@@ -14,6 +14,7 @@
   "classifier.upload": "Subir y clasificar",
   "classifier.please.select.file": "Por favor, seleccione un archivo primero.",
 
+  "showcase.title": "Exia - Exhibición 3D de Planetas",
   "showcase.choose": "Elige tu planeta",
   "showcase.label": "Nombre del planeta:",
   "showcase.placeholder": "p. ej., Earth, Jupiter, Mars",
@@ -24,8 +25,6 @@
   "scene.hotspot1.title": "1",
   "scene.hotspot1.desc": "Esta es la Gran Mancha Roja de Júpiter",
   "scene.hotspot2.title": "2",
-  "scene.hotspot2.desc": "Bandas y zonas de Júpiter",
-
-  "switcher.label": "Idioma"
+  "scene.hotspot2.desc": "Bandas y zonas de Júpiter"
 }
 

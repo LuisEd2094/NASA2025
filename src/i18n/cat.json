@@ -5,7 +5,7 @@
 
   "layout.home": "Inici",
 
-  "classifier.title": "Classificador d'IA",
+  "classifier.title": "Exia - Classificador d'IA",
   "classifier.download.csv": "Descarregar CSV",
   "classifier.download.json": "Descarregar JSON",
   "classifier.results": "Resultats",
@@ -14,6 +14,7 @@
   "classifier.upload": "Pujar i classificar",
   "classifier.please.select.file": "Si us plau, selecciona un fitxer primer.",
 
+  "showcase.title": "Exhibició 3D de Planetes",
   "showcase.choose": "Escull el teu planeta",
   "showcase.label": "Nom del planeta:",
   "showcase.placeholder": "p. ej., Earth, Jupiter, Mars",
@@ -24,8 +25,6 @@
   "scene.hotspot1.title": "1",
   "scene.hotspot1.desc": "Aquesta és la Gran Manxa Vermella de Júpiter",
   "scene.hotspot2.title": "2",
-  "scene.hotspot2.desc": "Bandes i zones de Júpiter",
-
-  "switcher.label": "Llengua"
+  "scene.hotspot2.desc": "Bandes i zones de Júpiter"
 }
 

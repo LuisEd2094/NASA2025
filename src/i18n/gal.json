@@ -5,7 +5,7 @@
 
   "layout.home": "Inicio",
 
-  "classifier.title": "Clasificador de IA",
+  "classifier.title": "Exia - Clasificador de IA",
   "classifier.download.csv": "Descargar CSV",
   "classifier.download.json": "Descargar JSON",
   "classifier.results": "Resultados",
@@ -14,6 +14,7 @@
   "classifier.upload": "Subir e clasificar",
   "classifier.please.select.file": "Por favor, selecciona un ficheiro primeiro.",
 
+  "showcase.title": "Exia - Exhibición 3D de Planetas",
   "showcase.choose": "Escolle o teu planeta",
   "showcase.label": "Nome do planeta:",
   "showcase.placeholder": "p. ex., Earth, Jupiter, Mars",
@@ -24,8 +25,6 @@
   "scene.hotspot1.title": "1",
   "scene.hotspot1.desc": "Esta é a Gran Mancha Vermella de Xúpiter",
   "scene.hotspot2.title": "2",
-  "scene.hotspot2.desc": "Bandas e zonas de Xúpiter",
-
-  "switcher.label": "Lingua"
+  "scene.hotspot2.desc": "Bandas e zonas de Xúpiter"
 }
 
