@@ -6,7 +6,7 @@
   "layout.home": "Inicio",
 
   "classifier.title": "Clasificador de IA",
-  "classifier.download.csv": "DescargarCSV",
+  "classifier.download.csv": "Descargar CSV",
   "classifier.download.json": "Descargar JSON",
   "classifier.results": "Resultados",
   "classifier.classification": "Clasificación",
