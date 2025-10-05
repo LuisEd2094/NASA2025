@@ -55,5 +55,22 @@
   "planet.ice-giant": "Gigante de Hielo",
   "planet.ice-giant.desc": "Un planeta compuesto de hielo, agua y otros volátiles",
   "planet.desert-world": "Mundo Desértico",
-  "planet.desert-world.desc": "Un planeta seco y árido con poca o nada de agua"
+  "planet.desert-world.desc": "Un planeta seco y árido con poca o nada de agua",
+  
+  "slider.title": "Parámetros del Exoplaneta",
+  "slider.mass": "Masa",
+  "slider.radius": "Radio",
+  "slider.temperature": "Temperatura",
+  "slider.orbital-distance": "Distancia Orbital",
+  "slider.atmosphere": "Atmósfera",
+  "slider.water-content": "Contenido de Agua",
+  "slider.brightness": "Brillo",
+  "slider.classify-button": "Clasificar Exoplaneta",
+  "slider.unit.earth-masses": "masas terrestres",
+  "slider.unit.earth-radii": "radios terrestres",
+  "slider.unit.kelvin": "K",
+  "slider.unit.au": "UA",
+  "slider.unit.atm": "atm",
+  "slider.unit.percent": "%",
+  "slider.unit.times": "x"
 }

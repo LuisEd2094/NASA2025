@@ -55,5 +55,22 @@
   "planet.ice-giant": "Ice Giant",
   "planet.ice-giant.desc": "A planet composed of ice, water, and other volatiles",
   "planet.desert-world": "Desert World",
-  "planet.desert-world.desc": "A dry, arid planet with little to no water"
+  "planet.desert-world.desc": "A dry, arid planet with little to no water",
+  
+  "slider.title": "Exoplanet Parameters",
+  "slider.mass": "Mass",
+  "slider.radius": "Radius",
+  "slider.temperature": "Temperature",
+  "slider.orbital-distance": "Orbital Distance",
+  "slider.atmosphere": "Atmosphere",
+  "slider.water-content": "Water Content",
+  "slider.brightness": "Brightness",
+  "slider.classify-button": "Classify Exoplanet",
+  "slider.unit.earth-masses": "Earth masses",
+  "slider.unit.earth-radii": "Earth radii",
+  "slider.unit.kelvin": "K",
+  "slider.unit.au": "AU",
+  "slider.unit.atm": "atm",
+  "slider.unit.percent": "%",
+  "slider.unit.times": "x"
 }

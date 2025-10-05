@@ -60,5 +60,22 @@
   "planet.ice-giant": "Gegant de Gel",
   "planet.ice-giant.desc": "Un planeta compost de gel, aigua i altres volàtils",
   "planet.desert-world": "Món Desèrtic",
-  "planet.desert-world.desc": "Un planeta sec i àrid amb poca o cap aigua"
+  "planet.desert-world.desc": "Un planeta sec i àrid amb poca o cap aigua",
+  
+  "slider.title": "Paràmetres de l'Exoplaneta",
+  "slider.mass": "Massa",
+  "slider.radius": "Radi",
+  "slider.temperature": "Temperatura",
+  "slider.orbital-distance": "Distància Orbital",
+  "slider.atmosphere": "Atmosfera",
+  "slider.water-content": "Contingut d'Aigua",
+  "slider.brightness": "Brillantor",
+  "slider.classify-button": "Classificar Exoplaneta",
+  "slider.unit.earth-masses": "masses terrestres",
+  "slider.unit.earth-radii": "radis terrestres",
+  "slider.unit.kelvin": "K",
+  "slider.unit.au": "UA",
+  "slider.unit.atm": "atm",
+  "slider.unit.percent": "%",
+  "slider.unit.times": "x"
 }

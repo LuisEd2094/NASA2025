@@ -52,5 +52,22 @@
   "planet.ice-giant": "",
   "planet.ice-giant.desc": "",
   "planet.desert-world": "",
-  "planet.desert-world.desc": ""
+  "planet.desert-world.desc": "",
+  
+  "slider.title": "Parámetros do Exoplaneta",
+  "slider.mass": "Masa",
+  "slider.radius": "Radio",
+  "slider.temperature": "Temperatura",
+  "slider.orbital-distance": "Distancia Orbital",
+  "slider.atmosphere": "Atmosfera",
+  "slider.water-content": "Contido de Auga",
+  "slider.brightness": "Brillo",
+  "slider.classify-button": "Clasificar Exoplaneta",
+  "slider.unit.earth-masses": "masas terrestres",
+  "slider.unit.earth-radii": "radios terrestres",
+  "slider.unit.kelvin": "K",
+  "slider.unit.au": "UA",
+  "slider.unit.atm": "atm",
+  "slider.unit.percent": "%",
+  "slider.unit.times": "x"
 }

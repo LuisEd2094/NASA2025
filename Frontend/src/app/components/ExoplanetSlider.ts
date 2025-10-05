@@ -12,8 +12,8 @@ export interface ExoplanetSliderConfig {
   min: number;
   max: number;
   step: number;
-  label: string;
-  unit: string;
+  labelKey: string;
+  unitKey: string;
   key: keyof ExoplanetParameters;
 }
 
@@ -22,56 +22,56 @@ export const EXOPLANET_CONFIGS: ExoplanetSliderConfig[] = [
     min: 0.1,
     max: 10,
     step: 0.1,
-    label: 'Mass',
-    unit: 'Earth masses',
+    labelKey: 'slider.mass',
+    unitKey: 'slider.unit.earth-masses',
     key: 'mass'
   },
   {
     min: 0.1,
     max: 2,
     step: 0.01,
-    label: 'Radius',
-    unit: 'Earth radii',
+    labelKey: 'slider.radius',
+    unitKey: 'slider.unit.earth-radii',
     key: 'radius'
   },
   {
     min: 200,
     max: 800,
     step: 10,
-    label: 'Temperature',
-    unit: 'K',
+    labelKey: 'slider.temperature',
+    unitKey: 'slider.unit.kelvin',
     key: 'temperature'
   },
   {
     min: 0.01,
     max: 5,
     step: 0.01,
-    label: 'Orbital Distance',
-    unit: 'AU',
+    labelKey: 'slider.orbital-distance',
+    unitKey: 'slider.unit.au',
     key: 'orbitalDistance'
   },
   {
     min: 0,
     max: 100,
     step: 1,
-    label: 'Atmosphere',
-    unit: 'atm',
+    labelKey: 'slider.atmosphere',
+    unitKey: 'slider.unit.atm',
     key: 'atmosphere'
   },
   {
     min: 0,
     max: 100,
     step: 1,
-    label: 'Water Content',
-    unit: '%',
+    labelKey: 'slider.water-content',
+    unitKey: 'slider.unit.percent',
     key: 'composition'
   },
   {
     min: 0.1,
     max: 3.0,
     step: 0.1,
-    label: 'Brightness',
-    unit: 'x',
+    labelKey: 'slider.brightness',
+    unitKey: 'slider.unit.times',
     key: 'brightness'
   }
 ];
@@ -80,9 +80,11 @@ export class ExoplanetSlider {
   private container: HTMLElement;
   private parameters: ExoplanetParameters;
   private onChangeCallback?: (params: ExoplanetParameters) => void;
+  private t: (key: string) => string;
 
-  constructor(container: HTMLElement, initialParams?: Partial<ExoplanetParameters>) {
+  constructor(container: HTMLElement, t: (key: string) => string, initialParams?: Partial<ExoplanetParameters>) {
     this.container = container;
+    this.t = t;
     this.parameters = {
       mass: 1,
       radius: 1,
@@ -111,15 +113,20 @@ export class ExoplanetSlider {
     this.updateSliders();
   }
 
+  public updateTranslations(t: (key: string) => string) {
+    this.t = t;
+    this.render();
+  }
+
   private render() {
     this.container.innerHTML = `
       <div class="exoplanet-controls">
-        <h3>Exoplanet Parameters</h3>
+        <h3>${this.t('slider.title')}</h3>
         <div class="sliders-container">
           ${EXOPLANET_CONFIGS.map(config => this.createSliderHTML(config)).join('')}
         </div>
         <div class="controls-footer">
-          <button id="classify-btn" class="classify-button">Classify Exoplanet</button>
+          <button id="classify-btn" class="classify-button">${this.t('slider.classify-button')}</button>
         </div>
       </div>
     `;
@@ -132,7 +139,7 @@ export class ExoplanetSlider {
     return `
       <div class="slider-group">
         <label for="${config.key}-slider">
-          ${config.label}: <span id="${config.key}-value">${value.toFixed(config.step < 1 ? 2 : 0)}</span> ${config.unit}
+          ${this.t(config.labelKey)}: <span id="${config.key}-value">${value.toFixed(config.step < 1 ? 2 : 0)}</span> ${this.t(config.unitKey)}
         </label>
         <input 
           type="range" 

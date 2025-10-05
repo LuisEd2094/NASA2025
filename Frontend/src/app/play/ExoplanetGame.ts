@@ -110,7 +110,7 @@ export class ExoplanetGame {
       console.error('Slider container not found!');
       return;
     }
-    this.slider = new ExoplanetSlider(sliderContainer, this.gameState.currentGuess);
+    this.slider = new ExoplanetSlider(sliderContainer, this.t, this.gameState.currentGuess);
     console.log('Slider initialized successfully');
     
     this.updateTargetDescription();
